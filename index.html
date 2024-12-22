@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Your Path with Aspire: Explore personalized career and business recommendations. Our platform analyzes your skills, interests, and goals to provide tailored suggestions. Make informed decisions for your future. Support us by turning off ad-blockers and consider donating.">
+    <link rel="icon" type="image/png" href="Aspire.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="quotes.js"></script>
+    <script src="main.js"></script>
+    <script src="processor.js"></script>
+    <title>ASPIRE Business and Career Guide</title>
+    </script>
+    </head>
+<body onload="startup();">
+    <noscript class="center-all">
+        <h1>Please Enable JavaScript To Use This Website</h1>
+    </noscript>
+    <div id="every-display">
+        <div id="noadblock">
+            <h1>OOPS! Adblocker detected! Please disable adblocker to use our service, thank you :)</h1>
+        </div>
+        <div id="secondary-display" class="ad ads ad-zone">
+            <div id="blur-area">
+                <div id="container">
+                    <div id="logo-cover-photo-section">
+                        <img src="AspireCover.png" id="logo-cover-photo" alt="ASPIRE Cover Photo">
+                    </div>
+					
+                    <div id="headline">
+                        <span class="font1 center-all">A S P I R E</span>
+                        <span class="font3 center-all">Business and Career Guide</span>
+                        <button onclick="get_started();" class="font1" id="get-started">Get Started</button>
+                    </div>
+
+                    <div id="form" class="white-bg">
+					
+					    <label class="font2">What is your name? (Optional)<input id="name" class="font2" type="text"></label><br><br><br>
+
+                        <span class="font2">Which type of recommendation do you want?</span><br>
+                        <label class="font3"><input name="type" id="business" class="font2" type="radio"> Business
+                            Recommendation</label><br>
+                        <label class="font3"><input name="type" id="career" class="font2" type="radio"> Career
+                            Recommendation</label><br>
+                        <br>
+
+                        <span class="font2">What kind of skills do you have?</span><br>
+                        <label class="font3"><input name="skills" id="verbal-communication" type="checkbox"> Verbal
+                            Communication</label><br>
+                        <label class="font3"><input name="skills" id="written-communication" type="checkbox"> Written
+                            Communication</label><br>
+                        <label class="font3"><input name="skills" id="programming" type="checkbox">
+                            Programming</label><br>
+                        <label class="font3"><input name="skills" id="web-development" type="checkbox"> Web
+                            Development</label><br>
+                        <label class="font3"><input name="skills" id="data-analysis" type="checkbox"> Data
+                            Analysis</label><br>
+                        <label class="font3"><input name="skills" id="graphic-design" type="checkbox"> Graphic
+                            Design</label><br>
+                        <label class="font3"><input name="skills" id="critical-thinking" type="checkbox"> Critical
+                            Thinking</label><br>
+                        <label class="font3"><input name="skills" id="logical-reasoning" type="checkbox"> Logical
+                            Reasoning</label><br>
+                        <label class="font3"><input name="skills" id="creative-writing" type="checkbox"> Creative
+                            Writing</label><br>
+                        <label class="font3"><input name="skills" id="design" type="checkbox"> Design</label><br>
+                        <label class="font3"><input name="skills" id="team-management" type="checkbox"> Team
+                            Management</label><br>
+                        <label class="font3"><input name="skills" id="decision-making" type="checkbox">
+                            Decision-Making</label><br>
+                        <label class="font3"><input name="skills" id="time-management" type="checkbox"> Time
+                            Management</label><br>
+                        <label class="font3"><input name="skills" id="project-management" type="checkbox"> Project
+                            Management</label><br>
+                        <label class="font3"><input name="skills" id="relationship-building" type="checkbox">
+                            Relationship Building</label><br>
+                        <label class="font3"><input name="skills" id="collaboration" type="checkbox">
+                            Collaboration</label><br>
+                        <label class="font3"><input name="skills" id="sales-techniques" type="checkbox"> Sales
+                            Techniques</label><br>
+                        <label class="font3"><input name="skills" id="marketing-strategy" type="checkbox"> Marketing
+                            Strategy</label><br>
+                        <label class="font3"><input name="skills" id="multilingual-abilities" type="checkbox">
+                            Multilingual Abilities</label><br>
+                        <label class="font3"><input name="skills" id="customer-relationship-management" type="checkbox">
+                            Customer Relationship Management</label><br>
+                        <label class="font3"><input name="skills" id="troubleshooting" type="checkbox">
+                            Troubleshooting</label><br>
+                        <label class="font3"><input name="skills" id="budgeting" type="checkbox"> Budgeting</label><br>
+                        <label class="font3"><input name="skills" id="financial-analysis" type="checkbox"> Financial
+                            Analysis</label><br>
+                        <label class="font3"><input name="skills" id="medical-knowledge" type="checkbox"> Medical
+                            Knowledge</label><br>
+                        <label class="font3"><input name="skills" id="curriculum-development" type="checkbox">
+                            Curriculum Development</label><br>
+                        <label class="font3"><input name="skills" id="mechanical-engineering" type="checkbox">
+                            Mechanical Engineering</label><br>
+                        <label class="font3"><input name="skills" id="experiment-design" type="checkbox"> Experiment
+                            Design</label><br>
+                        <label class="font3"><input name="skills" id="athletic-abilities" type="checkbox"> Athletic
+                            Abilities</label><br>
+                        <label class="font3"><input name="skills" id="cooking-techniques" type="checkbox"> Cooking
+                            Techniques</label><br>
+                        <label class="font3"><input name="skills" id="carpentry" type="checkbox"> Carpentry</label><br>
+                        <label class="font3"><input name="skills" id="sustainable-practices" type="checkbox">
+                            Sustainable Practices</label><br>
+                        <br>
+                        <div class="center-h">
+                            <span class="font3">Do you want an advice? (Optional)</span><br>
+                            <label class="font3"><input id="advice" type="checkbox"> Yes</label>
+                        </div><br>
+                        <div class="center-h"><span class="font3">Make sure to read our <span class="footer-design-text"
+                                    onclick="privacy();"> <u>privacy policy</u> </span> and<span
+                                    class="footer-design-text" onclick="terms();"> <u>terms and conditions</u>
+                                </span>before submitting</span></div>
+                        <div class="center-all"><button onclick="submit();" class="font2" id="submit">Submit</button>
+                        </div>
+
+                    </div>
+                    <!-- adsterra native 1 -->
+                    <div class="white-only" id="container-fbf54cd60d8e837c7b64f40e0d1fcf8d"></div>
+                    <div id="recommendation-area" class="white-bg">
+                        <span class="font1">Recommendation</span>
+                        <!-- Dynamically Generated -->
+                    </div>
+                    <div class="dark-red-bg">
+                        <span class="font1">What is ASPIRE?</span><br>
+                        <span class="font3">"Aspire" is an online platform that offers personalized recommendations for
+                            potential career paths and business opportunities.</span>
+                    </div>
+                    <div class="center-all">
+                        <img src="Opportunities.jpg" alt="Cover Photo Data" class="data-photos">
+                    </div>
+                    <div class="purple-bg">
+                        <span class="font1">How does Aspire work?</span><br>
+                        <span class="font3">User provides necessary information that our website asks then our
+                            algorithms process it to generate the best analysis results.</span>
+                    </div>
+                    <div class="center-all">
+                        <img src="DataFlow.jpg" alt="Cover Photo Data" class="data-photos">
+                    </div>
+                    <div class="light-blue-bg">
+                        <span class="font1">What kind of recommendations does Aspire provide?</span><br>
+                        <span class="font3">Aspire provides necessary and relevant recommendations based on the input
+                            provided by the user that will self-growth.</span>
+                    </div>
+                    <div class="center-all">
+                        <img src="Recommendation.jpg" alt="Cover Photo Data" class="data-photos">
+                    </div>
+                    <div class="dark-red-bg">
+                        <br>
+                        <span class="font1">Other FAQs: </span><br>
+                        <br><br>
+                        <span class="font1">Is my information secure on Aspire?</span><br>
+                        <span class="font3">Yes! your privacy is our priority, we do not store any of your info in our
+                            servers, instead we use algorithms to calculate recommendations.</span>
+                        <br><br><br>
+                        <span class="font1">Can I trust the recommendations from Aspire?</span><br>
+                        <span class="font3">Our objective in ASPIRE is to help create successful people, it is up to the
+                            user to follow these recommendations, you may read our website's <span
+                                class="footer-design-text" onclick="terms();"><u>Terms and Conditions</u></span> for
+                            more details.</span>
+                        <br><br><br>
+                        <span class="font1">Do I have to follow the recommendations?</span><br>
+                        <span class="font3">If a user think that our recommendation is useful, the may follow it or not.
+                            It is entirely up users if they would like to follow recommendations or not.</span>
+                        <br><br><br>
+                        <span class="font1">Why do I need to turn off ad-blockers?</span><br>
+                        <span class="font3">Running and maintaining a website is not free, we rely on advertisements to
+                            generate revenue. It help keeps our website free to use. We hope you understand.</span>
+                        <br><br><br>
+                        <span class="font1">How can I donate to support Aspire?</span><br>
+                        <span class="font3">You can support us by donating via PayPal or GCash. Click <span
+                                class="footer-design-text" onclick="donate();"><u>this</u></span> to donate. If nothing
+                            shows up to your screen, your browser may be incompatible with our website javascript or you
+                            may turn on javascript on your website setting.</span>
+                        <br><br><br>
+                        <span class="font1">Are there any costs associated with using Aspire?</span><br>
+                        <span class="font3">Our website is free to use, we rely on advertisements to make
+                            revenue.</span>
+                        <br><br><br>
+                        <span class="font1">Can I provide feedback on the recommendations?</span><br>
+                        <span class="font3">This website is was created by Khian, you may message me at
+                            <span class="footer-design-text"><a target="_blank" href="mailto:khianpublicmail@gmail.com"
+                                    class="footer-design-text"><u>khianpublicmail@gmail.com</u></a></span> for feedback and
+                            suggestions.</span>
+                        <br><br><br>
+                        <span class="font1">Is Aspire suitable for students/working professionals/changing
+                            careers?</span><br>
+                        <span class="font3">Yes, absolutely. "Aspire" is designed to cater to a wide range of
+                            individuals. Our platform's personalized recommendations are tailored to accommodate various
+                            stages of your professional journey, helping you explore possibilities that align with your
+                            skills, interests, and aspirations.</span>
+                    </div>
+                    <div class="center-all">
+                        <img src="FooterPage.jpg" alt="Cover Photo Data" class="data-photos">
+                    </div>
+                </div>
+                <div id="footer">
+                    <div id="footer-text">
+                        <span class="font4">
+                            <span class="footer-design-text" onclick="donate();">Donate</span> |
+                            <span class="footer-design-text"><a target="_blank" href="https://khian.netlify.app/"
+                                    class="footer-design-text">Contact Me</a></span> |
+                            <span class="footer-design-text" onclick="privacy();">Privacy Policy</span> |
+                            <span class="footer-design-text" onclick="terms();">Terms and Conditions</span>
+                            <br><br>
+                            <span>Website Created by <a target="_blank" href="https://khian.netlify.app/"
+                                    class="footer-design-text"><u>Khian Victory D. Calderon</u></a></span><br>
+                            <span>All Rights Reserved 2023.</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="privacy">
+                <div class="fixed-contents">
+                    <span onclick="close_privacy();" class="font1 cursor-pointer float-right"><b>✖</b></span>
+                    <span class="font1">Privacy Policy</span><br>
+                    <span class="font3">Last updated: August 26, 2023</span><br>
+                    <br><br>
+                    <span class="font3">This Privacy Policy outlines the manner in which we collect, use, disclose, and
+                        safeguard personal information provided by users on the "Aspire" website hosted on GitHub. By
+                        utilizing this website, you signify your consent to the practices detailed in this
+                        policy.</span>
+                    <br><br><br>
+                    <span class="font3">We collect personal information voluntarily provided by users. Additionally, we
+                        gather usage information, including IP addresses, browser types, operating systems, and browsing
+                        behaviors, to enhance the experience of our GitHub Pages platform.</span>
+                    <br><br><br>
+                    <span class="font3">The information collected serves several purposes, including furnishing
+                        personalized career/business recommendations based on user input, refining the functionality and
+                        user-friendliness of our GitHub Pages site, delivering customer support, and analyzing usage
+                        trends for service enhancement.</span>
+                    <br><br><br>
+                    <span class="font3">While respecting the limitations of GitHub Pages hosting, we implement suitable
+                        security measures to mitigate unauthorized access, modification, disclosure, or destruction of
+                        personal data.</span>
+                    <br><br><br>
+                    <span class="font3">Cookies and similar technologies might be employed to enrich the experience on
+                        our GitHub Pages website. It's important to note that adjusting your browser settings to decline
+                        cookies could impact specific site features.</span>
+                    <br><br><br>
+                    <span class="font3">We may disclose personal information to service providers and partners assisting
+                        in the operation of our GitHub Pages website, adhere to legal requests, or comply with relevant
+                        laws and regulations. Such disclosure may also occur to protect our rights, privacy, safety,
+                        property, or that of users, partners, or the general public.</span>
+                    <br><br><br>
+                    <span class="font3">Our GitHub Pages website could include links to third-party websites. We do not
+                        assume responsibility for the privacy practices or content of these external sites.</span>
+                    <br><br><br>
+                    <span class="font3">Regarding children's privacy, our GitHub Pages website is not intended for
+                        individuals under 13 years old, and we do not knowingly collect personal information from
+                        children. Parents or guardians who believe their child has supplied personal information can
+                        contact us to have the data removed.</span>
+                    <br><br><br>
+                    <span class="font3">Please be aware that this Privacy Policy might be updated periodically to
+                        reflect changes in our practices or due to operational, legal, or regulatory considerations. Any
+                        changes will be posted on our GitHub Pages website.</span>
+                    <br><br><br>
+                </div>
+            </div>
+            <div id="terms">
+                <div class="fixed-contents">
+                    <span onclick="close_terms();" class="font1 cursor-pointer float-right"><b>✖</b></span>
+                    <span class="font1">Terms and Conditions</span><br>
+                    <span class="font3">By using the "Aspire" website, you are agreeing to the following terms and
+                        conditions:</span>
+                    <br><br><br>
+                    <span class="font3">The recommendations presented on the "Aspire" website are provided solely for
+                        informational purposes. Users are not obligated to follow or act upon the suggestions provided
+                        by the website. It's important to understand that these recommendations do not constitute
+                        professional advice, and the website cannot guarantee their accuracy, relevance, or
+                        effectiveness in individual circumstances.</span>
+                    <br><br><br>
+                    <span class="font3">The code and algorithms used on the "Aspire" website are proprietary and
+                        protected by intellectual property laws. Users are not permitted to distribute, modify, or edit
+                        the code in any form without explicit written consent from the website's operators.</span>
+                    <br><br><br>
+                    <span class="font3">Users acknowledge that entering accurate and truthful information is crucial for
+                        the efficacy of the recommendations. Providing correct data ensures that the algorithm can
+                        generate more relevant suggestions. Users are encouraged to enter the true and best of their
+                        knowledge information to enhance the accuracy of the algorithm's results.</span>
+                    <br><br><br>
+                    <span class="font3">It's crucial for users to exercise their own judgment and seek advice from
+                        qualified professionals before making any decisions based on the website's recommendations. The
+                        "Aspire" website and its operators do not accept responsibility for the outcomes of actions
+                        taken or not taken in response to the recommendations.</span>
+                    <br><br><br>
+                    <span class="font3">To ensure the continued availability of free services on the "Aspire" website,
+                        users are kindly requested to disable any ad-blockers while accessing the site. The website's
+                        revenue is supported by advertisements. Additionally, users have the option to contribute by
+                        making voluntary donations, which aid in maintaining and enhancing the website's
+                        offerings.</span>
+                    <br><br><br>
+                    <span class="font3">Donations made to the "Aspire" website are entirely voluntary and not
+                        obligatory. Users have the freedom to choose whether or not to donate, and any contributions
+                        made are a matter of personal choice. Donations, if provided, assist in the ongoing development
+                        and upkeep of the website, for which the operators are grateful.</span>
+                    <br><br><br>
+                    <span class="font3">By accessing and using our website, you acknowledge and agree that we do not
+                        exercise control over the content and nature of advertisements displayed on our platform. You
+                        understand that viewing these advertisements is undertaken at your own discretion and risk, and
+                        we disclaim any responsibility for the accuracy, relevance, or potential impact of such ads. It
+                        is your responsibility to evaluate the suitability of these ads for your preferences or needs,
+                        and we shall not be liable for any consequences arising from interactions, transactions, or
+                        engagements resulting from the advertisements shown on our website.</span>
+                    <br><br><br>
+                    <span class="font3">Your use of the "Aspire" website signifies your acceptance of these terms and
+                        conditions. If you disagree with any part of these terms, we advise refraining from using the
+                        website. Please be aware that these terms and conditions might be subject to updates. It's
+                        recommended to periodically review them for any changes.</span>
+                </div>
+            </div>
+            <div id="reminder">
+                <div class="fixed-contents v-spacing">
+                    <span class="font1">Hi, just few reminder:</span><br>
+                    <ul>
+                        <li><span class="font3">Before sharing info, check out our Privacy Policy & Terms below.</span>
+                        </li>
+
+                        <li><span class="font3">Please avoid using adblocker, it keeps our site free.</span></li>
+
+                        <li><span class="font3">Want to help more? <span onclick="close_reminder(); donate();" class="footer-design-text"><u>Donate</u></span> via PayPal/GCash.</span></li>
+
+                        <li><span class="font3">Like, follow, and rate our <span class="footer-design-text"><a target="_blank" href="https://facebook.com/websiteplix" class="footer-design-text"><u>FB</u></a></span> page.</span></li>
+                    </ul>
+                    <span onclick="close_reminder();" class="font1 cursor-pointer center-all"><b>Okay</b></span>
+                </div>
+            </div>
+            <div id="donate">
+                <div class="fixed-contents">
+                    <span onclick="close_donate();" class="font1 cursor-pointer float-right"><b>✖</b></span>
+                    <span class="font1">Donation</span>
+                    <br>
+                    <span class="font3">Thank you!, any amount of your donation means a lot for us.</span>
+                    <br><br>
+                    <span class="font3">For PayPal, donate via this <a target="_blank"
+                            href="https://www.paypal.com/paypalme/KhianVictory">link</a>.</span>
+                    <br><br>
+                    <span class="font3">For GCash, scan the QR code below using your GCash app:</span>
+                    <br><br>
+                    <div class="center-all">
+                        <img src="GCash.jpg" id="gcash-pic" alt="GCash Donation QR Code">
+                    </div>
+                </div>
+            </div>
+            <div tite="Download Clinx!" id="fixed-ads" onclick="handleAdClick(event)">
+                <span class="close-ad" onclick="closefixedad(event);">✖</span>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
